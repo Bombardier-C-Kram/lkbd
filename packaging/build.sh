@@ -28,6 +28,11 @@ if [ ! -f "../OUTLAYOUT/layout.xml" ]; then
     exit 1
 fi
 
+if [ ! -f "../OUTLAYOUT/evdev.xml" ]; then
+    echo "Error: OUTLAYOUT/evdev.xml not found. Generate the layout first."
+    exit 1
+fi
+
 mkdir -p dist
 
 echo "Building DEB package..."
@@ -44,7 +49,11 @@ rm -rf "/tmp/${TARDIR}"
 mkdir -p "/tmp/${TARDIR}/usr/share/X11/xkb/symbols"
 mkdir -p "/tmp/${TARDIR}/usr/share/dyalog-apl-keyboard"
 mkdir -p "/tmp/${TARDIR}/usr/lib/systemd/system"
+mkdir -p "/tmp/${TARDIR}/usr/share/xkeyboard-config.d/dyalog-apl-keyboard/symbols"
+mkdir -p "/tmp/${TARDIR}/usr/share/xkeyboard-config.d/dyalog-apl-keyboard/rules"
 cp ../OUTLAYOUT/dyalog "/tmp/${TARDIR}/usr/share/X11/xkb/symbols/dyalog"
+cp ../OUTLAYOUT/dyalog "/tmp/${TARDIR}/usr/share/xkeyboard-config.d/dyalog-apl-keyboard/symbols/dyalog"
+cp ../OUTLAYOUT/evdev.xml "/tmp/${TARDIR}/usr/share/xkeyboard-config.d/dyalog-apl-keyboard/rules/evdev.xml"
 cp ../OUTLAYOUT/layout.xml "/tmp/${TARDIR}/usr/share/dyalog-apl-keyboard/layout.xml"
 cp scripts/register-layout.sh "/tmp/${TARDIR}/usr/share/dyalog-apl-keyboard/register-layout.sh"
 cp systemd/dyalog-apl-keyboard.service "/tmp/${TARDIR}/usr/lib/systemd/system/"

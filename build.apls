@@ -1,7 +1,6 @@
 #!/bin/dyalogscript DYALOG_INITSESSION=1
 ⎕SE.Link.Import '#' './APLSource'
 fn←{
-    0::⎕OFF 1
     GenerateKb
     ⎕←'Done'
 }

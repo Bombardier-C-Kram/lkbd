@@ -26,7 +26,12 @@ sudo apt install ./dyalog-apl-keyboard_*.deb
 sudo rpm -i dyalog-apl-keyboard-*.rpm
 ```
 
-The package registers the layout with XKB and installs a systemd service to keep it registered across `xkb-data` updates.
+The package installs in one of two modes depending on your system's `xkeyboard-config` version:
+
+- **>= 2.45 (extensions mode):** Layout files are placed in `/usr/share/xkeyboard-config.d/` and picked up natively. No runtime patching or systemd service is needed. Note that the layout works in Wayland compositors but may not appear in X11 settings UIs.
+- **< 2.45 (legacy mode):** The layout is patched into the system XKB rules files at install time, and a systemd service is enabled to re-apply the patch after `xkb-data` upgrades.
+
+If you upgrade `xkeyboard-config` from < 2.45 to >= 2.45 on a system where the legacy mode was active, the systemd service will automatically migrate: it removes the legacy patches, clears the XKB cache, and disables itself.
 
 To uninstall, use your package manager as usual, and cleanup will be handled automatically.
 
@@ -76,7 +81,7 @@ The XKB files in `OUTLAYOUT/` are generated from the JSON definitions in `layout
 _←GenerateKb
 ```
 
-This reads `layouts/*.json` and `xkb-symbols.json` and writes `OUTLAYOUT/dyalog` (XKB symbols) and `OUTLAYOUT/layout.xml` (XKB registration metadata).
+This reads `layouts/*.json` and `xkb-symbols.json` and writes `OUTLAYOUT/dyalog` (XKB symbols), `OUTLAYOUT/layout.xml` (XKB registration metadata for legacy patching), and `OUTLAYOUT/evdev.xml` (full XKB config registry document for extensions mode).
 
 ## Building Packages
 

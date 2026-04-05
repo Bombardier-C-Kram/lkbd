@@ -1,7 +1,7 @@
 name: dyalog-apl-keyboard
 arch: all
 platform: linux
-version: 0.2.3
+version: 0.3.1
 section: utils
 priority: optional
 maintainer: Holden Hoover <holdenhoover@bkaw.ca>
@@ -13,6 +13,16 @@ license: MIT
 contents:
   - src: ../OUTLAYOUT/dyalog
     dst: /usr/share/X11/xkb/symbols/dyalog
+    file_info:
+      mode: 0644
+
+  - src: ../OUTLAYOUT/dyalog
+    dst: /usr/share/xkeyboard-config.d/dyalog-apl-keyboard/symbols/dyalog
+    file_info:
+      mode: 0644
+
+  - src: ../OUTLAYOUT/evdev.xml
+    dst: /usr/share/xkeyboard-config.d/dyalog-apl-keyboard/rules/evdev.xml
     file_info:
       mode: 0644
 
@@ -41,12 +51,10 @@ overrides:
     depends:
       - systemd
       - xkb-data (>= 2.33)
-      - xkb-data (<< 2.45)
   rpm:
     depends:
       - systemd
       - xkeyboard-config >= 2.33
-      - xkeyboard-config < 2.45
 
 scripts:
   postinstall: scripts/postinstall.sh

@@ -37,3 +37,5 @@
  x[⍸(⎕UCS 13)⍷x]←⎕UCS 10
 
  x⊂⍛(⎕NPUT⍠'NEOL' 0)'OUTLAYOUT/layout.xml' 1
+ evdevXml←('<?xml version="1.0" encoding="UTF-8"?>',(⎕UCS 10),'<!DOCTYPE xkbConfigRegistry SYSTEM "xkb.dtd">',(⎕UCS 10),'<xkbConfigRegistry version="1.1">',(⎕UCS 10),'  <layoutList>',(⎕UCS 10)),x,'  </layoutList>',(⎕UCS 10),'</xkbConfigRegistry>',⎕UCS 10
+ evdevXml⊂⍛(⎕NPUT⍠'NEOL' 0)'OUTLAYOUT/evdev.xml' 1

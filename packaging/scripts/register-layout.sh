@@ -1,8 +1,31 @@
 #!/bin/bash
 # Idempotent registration of Dyalog APL layout in XKB evdev.xml/base.xml
 # Safe to run repeatedly. Only patches if the entry is missing.
+# On >= 2.45 systems, migrates away from legacy patching and self-disables.
 
 set -euo pipefail
+
+# Migration: if xkeyboard-config >= 2.45 is now installed, remove any legacy
+# patches and disable this service. Extensions in xkeyboard-config.d are used instead.
+if [ -d /usr/share/xkeyboard-config-2.d ]; then
+    unregister_from_file() {
+        local xml_file="$1"
+        [ -f "$xml_file" ] || return 0
+        grep -q '<name>dyalog</name>' "$xml_file" 2>/dev/null || return 0
+
+        sed -i '/<layout>/{
+            :start
+            /<\/layout>/!{N;b start}
+            /<name>dyalog<\/name>/d
+        }' "$xml_file"
+    }
+
+    unregister_from_file /usr/share/X11/xkb/rules/evdev.xml
+    unregister_from_file /usr/share/X11/xkb/rules/base.xml
+    rm -rf /var/lib/xkb/*.xkm 2>/dev/null || true
+    systemctl disable dyalog-apl-keyboard.service || true
+    exit 0
+fi
 
 LAYOUT_NAME="dyalog"
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
