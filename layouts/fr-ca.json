@@ -1,0 +1,471 @@
+{
+  "name": "Dyalog APL/fr-CA",
+  "shortName": "fr-ca",
+  "base": "ca(fr)",
+  "description": "Dyalog APL (fr-CA)",
+  "langCode": "fra",
+  "keys": {
+    "AB01": [
+      "z",
+      "Z",
+      "NoSymbol",
+      "NoSymbol",
+      "⊂",
+      "⊆"
+    ],
+    "AB02": [
+      "x",
+      "X",
+      "NoSymbol",
+      "NoSymbol",
+      "⊃",
+      "⊇"
+    ],
+    "AB03": [
+      "c",
+      "C",
+      "NoSymbol",
+      "NoSymbol",
+      "∩"
+    ],
+    "AB04": [
+      "v",
+      "V",
+      "NoSymbol",
+      "NoSymbol",
+      "∪"
+    ],
+    "AB05": [
+      "b",
+      "B",
+      "NoSymbol",
+      "NoSymbol",
+      "⊥",
+      "⍭"
+    ],
+    "AB06": [
+      "n",
+      "N",
+      "NoSymbol",
+      "NoSymbol",
+      "⊤",
+      "⍡"
+    ],
+    "AB07": [
+      "m",
+      "M",
+      "mu",
+      "NoSymbol",
+      "|",
+      "∥"
+    ],
+    "AB08": [
+      ",",
+      "'",
+      "macron",
+      "NoSymbol",
+      "⍝",
+      "⍪"
+    ],
+    "AB09": [
+      ".",
+      ".",
+      "hyphen",
+      "NoSymbol",
+      "⍀",
+      "⍙"
+    ],
+    "AB10": [
+      "eacute",
+      "Eacute",
+      "dead_acute",
+      "NoSymbol",
+      "⌿",
+      "⍠"
+    ],
+    "AC01": [
+      "a",
+      "A",
+      "NoSymbol",
+      "NoSymbol",
+      "⍺",
+      "⍶"
+    ],
+    "AC02": [
+      "s",
+      "S",
+      "NoSymbol",
+      "NoSymbol",
+      "⌈"
+    ],
+    "AC03": [
+      "d",
+      "D",
+      "NoSymbol",
+      "NoSymbol",
+      "⌊"
+    ],
+    "AC04": [
+      "f",
+      "F",
+      "NoSymbol",
+      "NoSymbol",
+      "_",
+      "⍛"
+    ],
+    "AC05": [
+      "g",
+      "G",
+      "NoSymbol",
+      "NoSymbol",
+      "∇",
+      "⍢"
+    ],
+    "AC06": [
+      "h",
+      "H",
+      "NoSymbol",
+      "NoSymbol",
+      "∆"
+    ],
+    "AC07": [
+      "j",
+      "J",
+      "NoSymbol",
+      "NoSymbol",
+      "∘",
+      "⍤"
+    ],
+    "AC08": [
+      "k",
+      "K",
+      "NoSymbol",
+      "NoSymbol",
+      "'",
+      "⌸"
+    ],
+    "AC09": [
+      "l",
+      "L",
+      "NoSymbol",
+      "NoSymbol",
+      "⎕",
+      "⌷"
+    ],
+    "AC10": [
+      ";",
+      ":",
+      "asciitilde",
+      "NoSymbol",
+      "⍎",
+      "≡"
+    ],
+    "AC11": [
+      "dead_grave",
+      "dead_grave",
+      "braceleft",
+      "NoSymbol",
+      "⍕",
+      "≢"
+    ],
+    "AD01": [
+      "q",
+      "Q",
+      "NoSymbol",
+      "NoSymbol",
+      "?",
+      "⍰"
+    ],
+    "AD02": [
+      "w",
+      "W",
+      "NoSymbol",
+      "NoSymbol",
+      "⍵",
+      "⍹"
+    ],
+    "AD03": [
+      "e",
+      "E",
+      "NoSymbol",
+      "NoSymbol",
+      "∊",
+      "⍷"
+    ],
+    "AD04": [
+      "r",
+      "R",
+      "NoSymbol",
+      "NoSymbol",
+      "⍴",
+      "⌾"
+    ],
+    "AD05": [
+      "t",
+      "T",
+      "NoSymbol",
+      "NoSymbol",
+      "~",
+      "⍨"
+    ],
+    "AD06": [
+      "y",
+      "Y",
+      "NoSymbol",
+      "NoSymbol",
+      "↑"
+    ],
+    "AD07": [
+      "u",
+      "U",
+      "NoSymbol",
+      "NoSymbol",
+      "↓"
+    ],
+    "AD08": [
+      "i",
+      "I",
+      "NoSymbol",
+      "NoSymbol",
+      "⍳",
+      "⍸"
+    ],
+    "AD09": [
+      "o",
+      "O",
+      "section",
+      "NoSymbol",
+      "○",
+      "⍥"
+    ],
+    "AD10": [
+      "p",
+      "P",
+      "paragraph",
+      "NoSymbol",
+      "*",
+      "⍣"
+    ],
+    "AD11": [
+      "dead_circumflex",
+      "dead_circumflex",
+      "bracketleft",
+      "NoSymbol",
+      "←",
+      "⍞"
+    ],
+    "AD12": [
+      "dead_cedilla",
+      "dead_diaeresis",
+      "bracketright",
+      "NoSymbol",
+      "→",
+      "⍬"
+    ],
+    "AE01": [
+      "1",
+      "!",
+      "plusminus",
+      "NoSymbol",
+      "¨",
+      "⌶"
+    ],
+    "AE02": [
+      "2",
+      "\"",
+      "at",
+      "NoSymbol",
+      "¯",
+      "⍫"
+    ],
+    "AE03": [
+      "3",
+      "/",
+      "sterling",
+      "NoSymbol",
+      "<",
+      "⍒"
+    ],
+    "AE04": [
+      "4",
+      "$",
+      "cent",
+      "NoSymbol",
+      "≤",
+      "⍋"
+    ],
+    "AE05": [
+      "5",
+      "%",
+      "currency",
+      "NoSymbol",
+      "=",
+      "⌽"
+    ],
+    "AE06": [
+      "6",
+      "?",
+      "notsign",
+      "NoSymbol",
+      "≥",
+      "⍉"
+    ],
+    "AE07": [
+      "7",
+      "&",
+      "brokenbar",
+      "NoSymbol",
+      ">",
+      "⊖"
+    ],
+    "AE08": [
+      "8",
+      "*",
+      "twosuperior",
+      "NoSymbol",
+      "≠",
+      "⍟"
+    ],
+    "AE09": [
+      "9",
+      "(",
+      "threesuperior",
+      "NoSymbol",
+      "∨",
+      "⍱"
+    ],
+    "AE10": [
+      "0",
+      ")",
+      "onequarter",
+      "NoSymbol",
+      "∧",
+      "⍲"
+    ],
+    "AE11": [
+      "-",
+      "_",
+      "onehalf",
+      "NoSymbol",
+      "×",
+      "!"
+    ],
+    "AE12": [
+      "=",
+      "+",
+      "threequarters",
+      "NoSymbol",
+      "÷",
+      "⌹"
+    ],
+    "BKSL": [
+      "<",
+      ">",
+      "braceright",
+      "NoSymbol",
+      "⊢",
+      "⊣"
+    ],
+    "KP0": [
+      "0",
+      "KP_Insert",
+      "NoSymbol",
+      "NoSymbol",
+      "─"
+    ],
+    "KP1": [
+      "1",
+      "KP_End",
+      "NoSymbol",
+      "NoSymbol",
+      "└"
+    ],
+    "KP2": [
+      "2",
+      "KP_Down",
+      "NoSymbol",
+      "NoSymbol",
+      "┴"
+    ],
+    "KP3": [
+      "3",
+      "KP_Next",
+      "NoSymbol",
+      "NoSymbol",
+      "┘"
+    ],
+    "KP4": [
+      "4",
+      "KP_Left",
+      "NoSymbol",
+      "NoSymbol",
+      "├"
+    ],
+    "KP5": [
+      "5",
+      "KP_Begin",
+      "NoSymbol",
+      "NoSymbol",
+      "┼"
+    ],
+    "KP6": [
+      "6",
+      "KP_Right",
+      "NoSymbol",
+      "NoSymbol",
+      "┤"
+    ],
+    "KP7": [
+      "7",
+      "KP_Home",
+      "NoSymbol",
+      "NoSymbol",
+      "┌"
+    ],
+    "KP8": [
+      "8",
+      "KP_Up",
+      "NoSymbol",
+      "NoSymbol",
+      "┬"
+    ],
+    "KP9": [
+      "9",
+      "KP_Prior",
+      "NoSymbol",
+      "NoSymbol",
+      "┐"
+    ],
+    "KPDL": [
+      ".",
+      "KP_Delete",
+      "NoSymbol",
+      "NoSymbol",
+      "│"
+    ],
+    "LSGT": [
+      "guillemotleft",
+      "guillemotright",
+      "degree",
+      "NoSymbol",
+      "⊢",
+      "⊣"
+    ],
+    "SPCE": [
+      " ",
+      " ",
+      "nobreakspace",
+      "NoSymbol",
+      " ",
+      " "
+    ],
+    "TLDE": [
+      "numbersign",
+      "bar",
+      "backslash",
+      "NoSymbol",
+      "⋄",
+      "⌺"
+    ]
+  }
+}

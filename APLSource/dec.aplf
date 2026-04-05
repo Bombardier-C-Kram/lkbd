@@ -1,0 +1,13 @@
+ dec←{⎕IO ⎕ML←0 1                                ⍝ Decimal from hexadecimal
+     ⍺←0                                         ⍝ unsigned by default.
+     1<⍴⍴⍵:⍺∘∇⍤1⊢⍵                               ⍝ vector-wise:
+     0=≢⍵:0                                      ⍝ dec'' → 0.
+     1≠≡,⍵:⍺ ∇¨⍵                                 ⍝ simple-array-wise:
+     ws←∊∘(⎕UCS 9 10 13 32 133 160)              ⍝ white-space?
+     ws⊃⍵:⍺ ∇ 1↓⍵                                ⍝ ignoring leading and
+     ws⊃⌽⍵:⍺ ∇ ¯1↓⍵                              ⍝ ... trailing blanks.
+     ∨/ws ⍵:⍺ ∇¨(1+ws ⍵)⊆⍵                       ⍝ white-space-separated:
+     v←16|'0123456789abcdef0123456789ABCDEF'⍳⍵   ⍝ hex digits.
+     11::'Too big'⎕SIGNAL 11                     ⍝ number too big.
+     (16⊥v)-⍺×(8≤⊃v)×16*≢v                       ⍝ (signed) decimal number.
+ }

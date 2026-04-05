@@ -1,0 +1,10 @@
+[Unit]
+Description=Ensure Dyalog APL keyboard layout is registered in XKB
+After=local-fs.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/share/dyalog-apl-keyboard/register-layout.sh
+
+[Install]
+WantedBy=multi-user.target

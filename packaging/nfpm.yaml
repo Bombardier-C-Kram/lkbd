@@ -1,0 +1,53 @@
+name: dyalog-apl-keyboard
+arch: all
+platform: linux
+version: 0.2.3
+section: utils
+priority: optional
+maintainer: Holden Hoover <holdenhoover@bkaw.ca>
+description: Dyalog APL keyboard layouts for XKB
+vendor: Holden Hoover
+homepage: https://tbd
+license: MIT
+
+contents:
+  - src: ../OUTLAYOUT/dyalog
+    dst: /usr/share/X11/xkb/symbols/dyalog
+    file_info:
+      mode: 0644
+
+  - src: ../OUTLAYOUT/layout.xml
+    dst: /usr/share/dyalog-apl-keyboard/layout.xml
+    file_info:
+      mode: 0644
+
+  - src: scripts/register-layout.sh
+    dst: /usr/share/dyalog-apl-keyboard/register-layout.sh
+    file_info:
+      mode: 0755
+
+  - src: systemd/dyalog-apl-keyboard.service
+    dst: /usr/lib/systemd/system/dyalog-apl-keyboard.service
+    file_info:
+      mode: 0644
+
+deb:
+  triggers:
+    interest_noawait:
+      - /usr/share/X11/xkb/rules
+
+overrides:
+  deb:
+    depends:
+      - systemd
+      - xkb-data (>= 2.33)
+      - xkb-data (<< 2.45)
+  rpm:
+    depends:
+      - systemd
+      - xkeyboard-config >= 2.33
+      - xkeyboard-config < 2.45
+
+scripts:
+  postinstall: scripts/postinstall.sh
+  preremove: scripts/preremove.sh

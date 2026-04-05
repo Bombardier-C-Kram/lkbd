@@ -1,0 +1,18 @@
+<layout>
+    <configItem>
+      <name>dyalog</name>
+      <shortDescription>APL</shortDescription>
+      <description>Dyalog APL Keyboards</description>
+    </configItem>
+    <variantList>
+      <variant>
+        <configItem>
+          <name>$shortName</name>
+          <description>$description</description>
+          <languageList>
+            <iso639Id>$langCode</iso639Id>
+          </languageList>
+        </configItem>
+      </variant>
+    </variantList>
+  </layout>
